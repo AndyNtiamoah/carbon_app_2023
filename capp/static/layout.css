@@ -1,112 +1,82 @@
-/* Colors */
-/* Rainy theme 5 -Green Digitalization Course and Students Apps-:
-Navbar (background): #8bbbd9
-Navbar (a hover): #466fa6
-Navbar (logo): #568c63
-Navbar (a menu): #2a4359
+/* Colors 
+Home, section 1 (header, background): #698269
+Home, section 1 (header, boxes): #B99B6B
+Home, section 2 (developers, background): #F1DBBF 
+Home, section 2 (developers, boxes): #AA5656 
 */
 
-/* Google fonts Roboto  */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,100&display=swap');
 
-/* CSS utilities */
+
+/* CSS utilitis  */
 *{
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
 }
-body {
-  font-family: 'Roboto', sans-serif;
-  background: #fff;
-  line-height: 1.6;
+body{
+    font-family: 'Roboto', sans-serif; 
+    line-height: 1,6;
 }
 .container {
-  margin: auto;
-  max-width: 1320px;
+    margin: auto;
+    max-width: 1320px;
 }
-ul { 
-  list-style: none;
-  font-size: 400;
+ul {
+    list-style: none;
 }
-a {
-  color: #333;
-  text-decoration: none;
+
+/* Navbar */
+.section_navbar {
+    background-color: #F6F4E8;
 }
-h1, h2 {
-  font-weight: 400;
-  line-height: 1.2;
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    height: 70px;
+    align-items: center;
+    background-color: #F6F4E8;
+    padding: 0px;
 }
-p {
-  margin: 10px 0;
-  font-size: 14px;
+.navbar a {
+    color: #40574D;
+    padding: 5px 20px;
+    margin: 0 5px;
+    font-size: 20px;
+    text-decoration: none;
 }
-img {
-  width: 100%;
+
+
+
+.navbar ul {
+    display: flex;
 }
-/* Navbar  */
-.section_carbon_app_navbar {
-  background-color:#8bbbd9;
+
+.navbar .logo {
+    font-weight: 400;
 }
-.carbon_app_navbar {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  height: 70px;
-  align-items: center;
-  background-color: #8bbbd9;
-  padding: 0 0px;
-}
-.carbon_app_navbar a {
-  color: #2a4359;
-  padding: 10px 20px;
-  margin: 0 5px;
-  font-size: 20px;
-  text-decoration: none;
-}
-.carbon_app_navbar a:hover{
-  border-bottom: #2a4359 4px solid;
-}
-.carbon_app_navbar ul {
-  display: flex;
-  flex-direction: row;
-}
-.carbon_app_navbar .logo {
-  font-weight: 400;
-}
+
 .text-logo {
-  color: #568c63;
+    color: #40574D;
 }
-/* Footer  */
-.section_footer{
-  background-color:#8bbbd9;
+
+/* Buttom bar */
+.section_footer {
+    background-color: #F6F4E8;
+    
 }
 .footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  height: 70px;
-  align-items: center;
-  background-color: #8bbbd9;
-  padding: 0 0px;
+    color: #1D3124;
+    background-color: #F6F4E8;
 }
 
-
-/* Media query */
+/* Media Query */
 @media(max-width:768px){
-  .carbon_app_navbar {
-    height: 180px;
-    flex-direction: column;
-  }
-  .carbon_app_navbar a {
-    font-size: 15px;
-    padding: 5px 20px;
-  }
-  .carbon_app_navbar ul {
-    display: flex;
-    flex-direction: column;
-  }
-  .carbon_app_navbar a:hover{
-    color: #568c63;
-    border-bottom: #2a4359 2px solid;
-  }
+    .navbar {
+        height: 160px;
+        flex-direction: column;
+    }
+    .navbar ul {
+        flex-direction: column;
+    }
 }

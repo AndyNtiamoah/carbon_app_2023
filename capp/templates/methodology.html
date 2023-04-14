@@ -1,30 +1,37 @@
+<!-- Colors 
+Home, section 1 (header, background): #698269
+Home, section 1 (header, boxes): #B99B6B
+Home, section 2 (developers, background): #F1DBBF 
+Home, section 2 (developers, boxes): #AA5656 
+*/ -->
+
 {% extends "layout.html" %}
 {% block content %}
-  
+
 <!-- Header -->
 <section class="section_header_methodology">
     <div class="container">
   
       <div class="header">
         <div class="box"> 
-          <h1 style="font-size:55px;"><span class="text-logo"> Methodology</span></h1>
+          <h1 style= "font-size:55px;"><span class=text-logo> Methodology</span></h1>
           <p style="text-align:left;">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat dolores quos asperiores repellendus facilis cum illo aperiam odit doloremque nostrum. Totam excepturi labore voluptatibus iusto sapiente quisquam consectetur optio magnam voluptates omnis vel officia alias distinctio quas laborum reiciendis ratione inventore veniam, cupiditate doloribus dolore, eius natus a. Magni inventore consequuntur voluptas reprehenderit perferendis! Molestias aspernatur rem autem aut temporibus.
+                  
+            <br>Here you can find our methodology for gathering data for the Carbon App.
+            The methodology for the Carbon App is based on real data on carbon emission. The students has been critical and search for sicens based data. The development of the formulas are made by the students and are explained. We hope that this Carbon app will help people to be more aware of their carbon emission on a daily basis, and hopefully reduce it.
           </p>
-          <div class="container_buttons_links_header">
-            <div class="btn">
-                <a href="#" class="btn btn-primary btn-lg mr-2", style="background-color:#007bff;">Paper</a>
-            </div>
-            <div class="btn">
-                <a href="{{url_for('carbon_app.carbon_app_home')}}" class="btn btn-primary btn-lg mr-2", style="background-color:#007bff;">Carbon App</a>
-            </div>
-          </div>  
+            <button class="btn">
+                <a href="https://docs.google.com/document/d/1LB7sJ2ddfoHPvye0LtYxO5xrmzEQeNHj2j6Ac6Gt_8c/edit?fbclid=IwAR3QH5EGtb0Qicoog0iJNQiYWfmuadTB3eiiieQOIfvOQS1CTFyBkUBR96I" class="button" target="_blank">Paper</a>
+            
+            
+                <a href="{{url_for('carbon_app.carbon_app_home')}}" class="button">Carbon App</a>
+            </button>
         </div>
         <div class="box">
           <img 
-            src="{{url_for('static', filename='icons/methodology1.svg')}}"
+            src="{{url_for('static', filename='icons/methodology_photo.png')}}"
             width="325" 
-            height="325"
+            height="337"
             alt=""/>
         </div>
       </div>
@@ -32,159 +39,116 @@
     </div>
 </section> 
 
-<!-- Methodology -->
-<section class="section_body_methodology">
+<!-- Transports -->
+<section class="section_transports">
     <div class="container">
-  
-        <div class="methodology" style="display:block;">
-            <h1 style="text-align:center;"> Methodology</h1>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-            </p>      
-        </div>
+   
+      <div class="transports" style="display:block;">
+        <br>
+        <div class="box">
+          <h1 style="text-align:center;"> Our methodology</h1>
+          <p>
+            Our group developed an app that calculates carbon emissions from transport to help individuals make informed decisions about their travel choices. 
+            To find the nessesary data and statistics to calculate the emission, we used a carbon footprint analysis. This methodology involves calculating the total greenhouse gas emission associated with different transport alternatives. By using a carbon footprint analysis we can provide a comprehensive view of an individual's environmental impact, including indirect and direct emission. 
 
-        <div class="methodology" style="display:block;">
-            <h1 style="text-align:center;"> Our numbers and formulas</h1>
-            <p>
-              We are going to studty some \(\LaTeX ~ formulas\) that could be useful for our project:
-            </p> 
+          </p>      
         </div>
-
-        <!--Enumerated list (table with two columns)-->
-        <div class="methodology"> 
-            <div class="box_table2" style="height:200px;">
-                <ol start="1">
-                    <li>
-                        <h4>Mathematical expressions 1</h4>
-                        <p class="text-left">
-                            Mathematical expressions \( x = {-b \pm \sqrt{b^2-4ac} \over 2a} \) inside text.
-                            <br>
-                            Mathematical expressions outside text:
-                            \[ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \]
-                        </p>
-                    </li>
-                </ol>                        
+      </div>
+   
+      <div class="transports" style="text-align: left;">
+          <div class="container">
+            <div class="box">
+   
+              <h3>Cars</h3>
+              <p>
+                Gasoline:
+                <br>According to SSB.no, an avarage gasoline driven car emits <br>157,47g CO\(_2\) per km.
+                <br><br>\[{0,157kg \times km} \over Passengers \]
+                
+                Diesel:
+                <br>According to SSB.no, an avarage diesel driven car emits <br>130,09g CO\(_2\) per km.
+                <br><br>\[{0,130kg \times km} \over Passengers \]
+                Hybrid:
+                <br>From transportsenvironment.org there has been estimated that an avarage hybrid plug in car emits 152g CO\(_2\) per km.
+                <br><br>\[{0,152kg \times km} \over Passengers \]
+                Electric:
+                <br>According to SSB.no, an avarage electrical driven car consumes 
+                <br>0,2 kWh per km. Generating 1 kWh with fossil fuels emits 0,388 kg of CO\(_2\)
+                <br><br>\[{0,2 kWh \times km \times 0,388 kg CO_2} \over Passengers \]
+              </p>
             </div>
-            <div class="box_table2" style="height:200px;">
-                <ol start="2">
-                    <li>
-                        <h4>Mathematical expressions 2</h4>
-                        <p class="text-left">
-                            Mathematical expressions \( x^2 + y^2 = z^2 \) inside text.
-                            <br>
-                            Mathematical expressions outside text:
-                            \[ x^2 + y^2 = z^2 \]
-                        </p>
-                    </li>
-                </ol>
-            </div>  
-        </div>
-
-        <!--Enumerated list (table with two columns)-->
-        <div class="methodology"> 
-            <div class="box_table2" style="height:425px;">
-                <ol start="3">
-                    <li>
-                        <h4>Sums</h4>
-                        <p class="text-left">
-                            Sum \(\sum_{n=1}^{\infty} 2^{-n} = 1\) inside text.
-                            <br>
-                            Sum outside text:
-                            \[ \sum_{n=1}^{\infty} 2^{-n} = 1 \]
-                        </p>
-                    </li>
-                    <li>
-                        <h4>Products</h4>
-                        <p class="text-left">
-                            Product \(\prod_{i=a}^{b} f(i)\) inside text.
-                            <br>
-                            Product outside text:
-                            \[ \prod_{i=a}^{b} f(i) \]
-                        </p>
-                    </li>
-                </ol>                        
+            <div class="box">
+              <h3>Busses</h3>
+              <p>
+                Diesel:
+                <br>According to SSB.no, an avarage diesel driven bus emits <br>855,4g CO\(_2\) per km.
+                <br><br>\[{0,855kg \times km} \over Passengers \]
+                Biodiesel:
+                <br>According to framtiden.no an avarge biodiesel driven bus emits 14g of CO\(_2\) per person km. 
+                <br><br>\[{0,014kg \times km}\]
+                Electric:
+                <br>According to Sustainable-bus.com, an avarage electrical driven bus consumes 
+                1,745 kWh per km. Generating 1 kWh with fossil fuels emits 0,388 kg of CO\(_2\)
+                <br><br>\[{1,745 kWh \times km \times 0,388 kg CO_2} \over Passengers \]
             </div>
-            <div class="box_table2" style="height:425px;">
-                <ol start="5">
-                    <li>
-                        <h4>Limits</h4>
-                        <p class="text-left">
-                            Limit \(\lim_{x\to\infty} f(x)\) inside text.
-                            <br>
-                            Limit outside text:
-                            \[ \lim_{x\to\infty} f(x) \]
-                        </p>
-                    </li>
-                    <li>
-                        <h4>Integrals</h4>
-                        <p class="text-left">
-                            Integral \(\int_{a}^{b} x^2 \,dx\) inside text.
-                            <br>
-                            Integral outside text:
-                            \[ \int_{a}^{b} x^2 \,dx \]
-                        </p>
-                    </li>
-                </ol>
-            </div>  
-        </div>
 
-        
+              
 
-        <!--Enumerated list (table with one column)-->
-        <div class="methodology">              
-            <div class="box_table1">
-                      
+   
+   
+          </div>
+          <div class="container" style="margin: 0;">
+            <div class="box2">
+              <h3>Other electrical transports:</h3>
+              <p>
+                A grown man that weighs 80kg and is 180cm tall, bicycling in the city
+                <br>will use energy worth of 0,037 kWh. (here we could convert to juuls and tell how much he would need to eat??)
+                <br><br>
+                El-kick-scooter:
+                <br>Electrical Two Wheels states in their product catalog that their El-kick-scooter on an avarage 
+                consumes 0,006kWh. Generating 1 kWh with fossil fuels emits 0,388 kg of CO\(_2\).
+                <br><br>\[0,006 kWh \times km \times 0,388 kg CO_2\]
+                El-bycycle:
+                <br>According to tredz.co.uk, an electrical bike with maximum capacity of 400 Wh will be last for 80km
+                on an open road, with good road surfaces and a steady pace. \({400 Wh \over 80km} = 5 Wh = 0,005 kWh \)
+                per km. Generating 1 kWh with fossil fuels emits 0,388 kg of CO\(_2\)
+                <br><br>\[0,005 kWh \times km \times 0,388 kg CO_2\]
+
+              </p>
             </div>
-            <div class="box_table1">
-                <ol>
-                    <li>
-                        <h4>Buses</h4>
-                        <p class="text-left">
-                            The <strong>carbon dioxide emissions</strong> produced by buses are organized in <strong>four categories</strong>. The carbon dioxide emission produced by diesel buses is 0.10231 grammes per kilometer. The carbon dioxide emission produced by CNG buses is 0.08 grammes per kilometer. The carbon dioxide emission produced by petrol buses is 0.10231 grammes per kilometer. If the buses do not use fossil fuel, their dioxide carbon emissions are 0 grammes per kilometer.
-                            <br>
-                            To work out buses dioxide emissions, we use the next formula:
-                            \[CO^2 = {Cte + \sqrt{f(km)} \over t}.\]
-                            <br>
-                            Where:
-                            <ul style="text-align:left;">
-                                <li>
-                                    \(Cte\) is a constant, since the engine requires some fuel to initialize.
-                                </li>
-                                <li>
-                                    \(km\) are the kilometers.
-                                </li>
-                                <li>
-                                    \(f\) is a coefficient depending on the type of fuel (see paragraph above).
-                                </li>
-                                <li>
-                                    \(t\) is the temperature, since in winter the engines require less fuel.
-                                </li>
-                            </ul>
-                            
-                        </p>
-                    </li>
-                    <li>
-                        <h4>Cars</h4>
-                        <p class="text-left">
-                            ...
-                        </p>
-                    </li>
-                    <li>
-                        <h4>Planes</h4>
-                        <p class="text-left">
-                            ...
-                        </p>
-                    </li>
-                </ol>                        
-            </div>
-            <div class="box_table1">
-                      
-            </div>  
-        </div>
-
-        
+            <div class="box2">
+              <h3>Airplain</h3>
+              <p>
+                Business class:
+                According to framtiden.no, each person sitting in business class is responsible for 298g of CO\(_2\) per km.
+                <br><br>\[{0,298kg \times km}\]
+                Economy class:
+                According to framtiden.no, each person sitting in economy class is responsible for 133g of CO\(_2\) per km.
+                <br><br>\[{0,133kg \times km}\]
+              </p>
+            </div>           
+            <div class="box2">
+              <h3>Walk</h3>
+    
+              <p>
+                A grown man that weighs 80kg and is 180cm tall, walking in a pace of 4 km/h
+                will use energy worth of 0,065 kWh. (here we could convert to juuls and tell how much he would need to eat??)
+    
+              </p>
+            </div>         
+            <div class="box">
+              <h3>Trains</h3>
+              <p>
+                According to framtiden.no an avarage train emits 45g of CO\(_2\) per person km.
+                <br><br>\[{0,045kg \times km}\]
+              </p>
+                
+            </div> 
+          </div>
       
-    </div>
-</section>
-
-{% endblock content %}
+        </div>
+      </div>
+    </div>          
+  </section>
+   
+  {% endblock content %}

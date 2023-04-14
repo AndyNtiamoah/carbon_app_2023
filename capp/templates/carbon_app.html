@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <!-- Header -->
+    <section class="section_header_carbon_app">
+        <div class="container">
+    
+        <div class="header_carbon_app">
+            <div class="box"> 
+            <h1 style="font-size:55px;"><span class="text-logo"> Carbon App Calculator</span></h1>
+            <p style="text-align:left">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat dolores quos asperiores repellendus facilis cum illo aperiam odit doloremque nostrum. Totam excepturi labore voluptatibus iusto sapiente quisquam consectetur optio magnam voluptates omnis vel officia alias distinctio quas laborum reiciendis ratione inventore veniam, cupiditate doloribus dolore, eius natus a. Magni inventore consequuntur voluptas reprehenderit perferendis! Molestias aspernatur rem autem aut temporibus.
+            </p>
+            <div class="container_buttons_links_header_carbon_app">
+                <div class="btn">
+                    <a href="{{url_for('methodology.methodology_home')}}" class="btn btn-primary btn-lg mr-2", style="background-color:#FF7F00;">Methodology</a>
+                </div>
+                <div class="btn">
+                    <a href="#" class="btn btn-primary btn-lg mr-2", style="background-color:#FF7F00;", data-toggle="modal" data-target="#carbon_app_instructions">Instructions</a>
+                </div>
+                <div class="btn">
+                    <a href="#" class="btn btn-primary btn-lg mr-2", style="background-color:#FF7F00;">Your emissions</a>
+                </div>
+            </div>  
+            <!-- Modal Instructions -->
+            <div class="modal fade" id="carbon_app_instructions" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                <div class="modal-content">
+          
+                    <div class="modal-header">
+                    <h5 class="modal-title", style="color:#888870; text-align: center;">Instructions</h5>
+                    </div>
+          
+                    <div class="modal-body", style="color:#888870">
+                    <p style="text-align: left;">
+                        To use this carbon app, you need to know what kind of transportation you have been using the last 7 days. 
+                    </p>
+                    <ol style="text-align:left;">
+                        <li>
+                            Write in how many km you have been traveling for with one kind of transportation.
+                        </li>
+                        <li>
+                            Select type of transportation.
+                        </li>
+                        <li>
+                            Select fuel of the transportation.
+                        </li>
+                        <li>
+                            Submit.
+                        </li>
+                    </ol>
+                    </div>
+          
+                    <div class="modal-footer">
+                    <button class="btn btn-secondary btn-lg mr-2", style="background-color:#888870;" data-dismiss="modal">Close</button>
+                    </div>
+          
+                </div>
+                </div>
+            </div>
+            </div>
+            <div class="box">
+            <img 
+                src="{{url_for('static', filename='icons/Carbon_calculator_3.svg')}}"
+                width="325" 
+                height="325"
+                alt=""/>
+            </div>
+        </div>
+        
+        </div>
+    </section> 
+       
+
+{% endblock content %}
