@@ -9,8 +9,8 @@ application = Flask(__name__)
 
 # application.config['SECRET_KEY'] = os.environ['SECRET_KEY']  
 
-application.config['SECRET_KEY'] = os.environ['SECRET_KEY']  '
-DBVAR = f"postgresql://{os.environ['RDS_USERNAME']}:{os.environ['RDS_PASSWORD']}@{os.environ['RDS_HOSTNAME']}/{os.environ['RDS_DB_NAME']}"
+application.config['SECRET_KEY'] = '23b3436c2bd9f7ee888955a2611f160471f78097432f6d3d'
+DBVAR = 'postgresql://postgres:123Japanognorge@awseb-e-ak2cfptjvy-stack-awsebrdsdatabase-kjgmzyyuqnqj.cclddedhaznl.eu-north-1.rds.amazonaws.com:5432/ebdb'
 # databases for users and transport 
 application.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///user.db'
 application.config['SQLALCHEMY_BINDS'] ={'transport': 'sqlite:///transport.db'}
