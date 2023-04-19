@@ -29,7 +29,7 @@ def login():
     user = User.query.filter_by(email=form.email.data).first()
     if user and bcrypt.check_password_hash(user.password, form.password.data):
         login_user(user, remember=form.remember.data)
-        next_page=request.args.get('next')
+        next_page= request.args.get('next')
         flash('You have logged in! Now, you can start to use the carbon app!', 'success')
         return redirect(next_page) if next_page else redirect(url_for('home.home_home'))
     else:
