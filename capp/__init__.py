@@ -9,7 +9,7 @@ application = Flask(__name__)
 
 # application.config['SECRET_KEY'] = os.environ['SECRET_KEY']  
 
-application.config['SECRET_KEY'] = '23b3436c2bd9f7ee888955a2611f160471f78097432f6d3d'
+application.config['SECRET_KEY'] = os.environ['SECRET_KEY']  '
 DBVAR = f"postgresql://{os.environ['RDS_USERNAME']}:{os.environ['RDS_PASSWORD']}@{os.environ['RDS_HOSTNAME']}/{os.environ['RDS_DB_NAME']}"
 # databases for users and transport 
 application.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///user.db'
